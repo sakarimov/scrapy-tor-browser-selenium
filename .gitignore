@@ -1,9 +1,12 @@
 # Created by .ignore support plugin (hsz.mobi)
 ### Python template
 # before release
-./requirements/requirements-test.txt
-./setup.py
-./tests/
+requirements/requirements-test.txt
+tests/
+.coveragerc
+.travis.yml
+MANIFEST.in
+README.md
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
