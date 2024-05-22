@@ -1,9 +1,9 @@
-"""This module contains the ``stbRequest`` class"""
+"""This module contains the ``tbsRequest`` class"""
 
 from scrapy import Request
 
 
-class stbRequest(Request):
+class tbsRequest(Request):
     """Scrapy ``Request`` subclass providing additional arguments"""
 
     def __init__(self, wait_time=None, wait_until=None, screenshot=False, script=None, *args, **kwargs):
