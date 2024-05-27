@@ -12,7 +12,8 @@ from tbselenium.tbdriver import TorBrowserDriver
 
 class tbsAddon:
     def update_settings(self, settings):
-        settings['DOWNLOADER_MIDDLEWARES']['stb.scrapytbs.scrapytbs.tbsMiddleware'] = 800
+        settings['DOWNLOADER_MIDDLEWARES']['scrapytbs.tbsMiddleware'] = 800
+        settings['DOWNLOADER_MIDDLEWARES']['scrapytbs.torProxyMiddleware'] = 543
 
 
 class tbsMiddleware:
