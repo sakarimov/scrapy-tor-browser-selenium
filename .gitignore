@@ -6,7 +6,6 @@ tests/
 .coveragerc
 .travis.yml
 MANIFEST.in
-README.md
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
