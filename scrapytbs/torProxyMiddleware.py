@@ -17,7 +17,7 @@ def new_tor_identity(password):
 class torProxyMiddleware(HttpProxyMiddleware):
     def process_response(self, request, response, spider):
         # Get a new identity depending on the response
-        password = get_project_settings('TBS_TOR_PASSWORD')
+        password = get_project_settings()['TBS_TOR_PASSWORD']
         if response.status != 200:
             new_tor_identity(password)
             return request
@@ -27,6 +27,6 @@ class torProxyMiddleware(HttpProxyMiddleware):
         # Set the Proxy
         # A new identity for each request
         # Comment out if you want to get a new Identity only through process_response
-        password = get_project_settings('TBS_TOR_PASSWORD')
+        password = get_project_settings()['TBS_TOR_PASSWORD']
         new_tor_identity(password)
         request.meta['proxy'] = 'http://127.0.0.1:8118'
