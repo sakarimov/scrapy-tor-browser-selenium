@@ -50,7 +50,7 @@ def parse_result(self, response):
 ```
 
 ### Additional arguments
-The `scrapytbs.tbsRequest` accepts 4 additional arguments:
+The `scrapytbs.tbsRequest` several additional arguments:
 
 #### `wait_time`/`wait_until`
 
@@ -90,6 +90,14 @@ yield tbsRequest(
     script="window.scrollTo(0, document.body.scrollHeight);"
 )
 ```
+
+### Additional Settings
+scrapytbs accepts several additional settings:
+
+#### TBS_IDENTITY_RENEWAL_RATE -> default 100
+#### TBS_PER_ERROR_RENEWAL -> default False
+#### TBS_PER_REQUEST_RENEWAL -> default False
+
 
 ### TODO
 - add ability to add Options() to the driver
